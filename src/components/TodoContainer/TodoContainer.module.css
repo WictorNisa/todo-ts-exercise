@@ -1,0 +1,40 @@
+.todoContainer {
+  width: 30%;
+  height: 70%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todoContainer h1 {
+  color: #343a40;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .todoContainer {
+    max-width: 90%;
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .todoContainer h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .todoContainer {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  .todoContainer h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}

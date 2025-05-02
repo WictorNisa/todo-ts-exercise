@@ -1,0 +1,92 @@
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.todoItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todoItem label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #495057;
+  cursor: pointer;
+  flex: 1;
+}
+
+.todoItem input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  border: 2px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.todoItem.completed {
+  background-color: #f8f9fa;
+  opacity: 0.8;
+}
+
+.todoItem.completed label {
+  text-decoration: line-through;
+  color: #868e96;
+}
+
+.deleteButton {
+  padding: 0.5rem;
+  background-color: #fa5252;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+  background-color: #e03131;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todoItem {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .todoItem {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .todoItem label {
+    font-size: 0.9rem;
+  }
+
+  .deleteButton {
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+}
